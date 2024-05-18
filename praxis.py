@@ -18,6 +18,7 @@ def funcion_interseccion(t):
 
 # PARTE A Demostrar que la curva r(t) = (t cos(t), t sin(t), t) se encuentra sobre un cono, y visualizar esta curva y el cono usando herramientas de gráficos 3D.
 
+
 def visualizar_curva_y_cono():
     # Genera los datos de la curva r(t) para graficar
     valores_t = np.linspace(-10, 10, 400)
@@ -27,27 +28,27 @@ def visualizar_curva_y_cono():
         valores_t,
     )
 
-    # Crea la figura y los ejes para la gráfica 3D
+    # Crea la figura y los ejes para la grafica 3D
     figura = plt.figure()
-    ax = figura.add_subplot(111, projection='3d')
+    ax = figura.add_subplot(111, projection="3d")
 
     # Grafica la curva r(t)
-    ax.plot(valores_x, valores_y, valores_z, label='Curva r(t)')
+    ax.plot(valores_x, valores_y, valores_z, label="Curva r(t)")
 
     # Genera los datos del cono para graficar
-    radio_base = 1  # Radio de la base del cono
-    altura = 5  # Altura del cono
-    u, v = np.linspace(0, 2 * np.pi, 100), np.linspace(0, 5, 100)  # Rango de t es de 0 a 5
+    u, v = np.linspace(0, 2 * np.pi, 100), np.linspace(
+        0, 5, 100
+    )  # Rango de t es de 0 a 5
     U, V = np.meshgrid(u, v)
     X, Y, Z = (V * np.cos(U), V * np.sin(U), V)  # Sustituyendo las componentes de r(t)
 
     # Grafica la superficie del cono
-    ax.plot_surface(X, Y, Z, alpha=0.5, color='pink')
-    ax.set_title('Curva r(t) y Cono')
+    ax.plot_surface(X, Y, Z, alpha=0.5, color="pink")
+    ax.set_title("Curva r(t) y Cono")
     ax.legend()
 
     # Comprobar que la curva r(t) se encuentra sobre la superficie del cono para 5 valores de t
-    t_values = [-8, -4, 0, 4, 8] #Aca modificar los puntos de comprobacion
+    t_values = [-8, -4, 0, 4, 8]  # Aca modificar los puntos de comprobacion
     for t in t_values:
         x = t * np.cos(t)
         y = t * np.sin(t)
@@ -56,14 +57,19 @@ def visualizar_curva_y_cono():
         print(f"Para t = {t}, x^2 + y^2 - z^2 = {comprobacion}")
 
         if np.isclose(comprobacion, 0):
-            print(f"La curva r(t) se encuentra sobre la superficie del cono para t = {t}.")
+            print(
+                f"La curva r(t) se encuentra sobre la superficie del cono para t = {t}."
+            )
         else:
-            print(f"La curva r(t) NO se encuentra sobre la superficie del cono para t = {t}.")
+            print(
+                f"La curva r(t) NO se encuentra sobre la superficie del cono para t = {t}."
+            )
 
     plt.show()
 
 
-# PARTE B 
+# PARTE B
+
 
 def interseccion_con_esfera():
     # Lista para almacenar los valores de t en los puntos de interseccion
@@ -203,6 +209,7 @@ def longitud_de_la_curva():
 
 
 # MENU
+
 
 def main():
     print("Praxis 2 | Adolfo Toledo - Ignacia Miranda")
