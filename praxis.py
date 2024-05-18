@@ -16,10 +16,12 @@ def funcion_interseccion(t):
     return r[0] ** 2 + r[1] ** 2 + r[2] ** 2 - 3
 
 
-# PARTE A
+# PARTE A Demostrar que la curva r(t) = (t cos(t), t sin(t), t) se encuentra sobre un cono, y visualizar esta curva y el cono usando herramientas de gráficos 3D.
 
 
-# PARTE B
+
+
+# PARTE B Objetivo: Determinar el punto de intersección de la curva con la esfera dada por la ecuación (x^2 + y^2 + z^2 = 2).
 
 
 def interseccion_con_esfera():
