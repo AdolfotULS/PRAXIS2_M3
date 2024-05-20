@@ -13,7 +13,7 @@ def curva_r(t):
 
 def funcion_interseccion(t):
     r = curva_r(t)
-    return r[0] ** 2 + r[1] ** 2 + r[2] ** 2 - 3
+    return r[0] ** 2 + r[1] ** 2 + r[2] ** 2 - 2
 
 
 # PARTE A Demostrar que la curva r(t) = (t cos(t), t sin(t), t) se encuentra sobre un cono, y visualizar esta curva y el cono usando herramientas de gráficos 3D.
