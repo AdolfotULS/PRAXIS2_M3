@@ -36,8 +36,6 @@ def visualizar_curva_y_cono():
     ax.plot(valores_x, valores_y, valores_z, label='Curva r(t)')
 
     # Genera los datos del cono para graficar
-    radio_base = 1  # Radio de la base del cono
-    altura = 5  # Altura del cono
     u, v = np.linspace(0, 2 * np.pi, 100), np.linspace(0, 5, 100)  # Rango de t es de 0 a 5
     U, V = np.meshgrid(u, v)
     X, Y, Z = (V * np.cos(U), V * np.sin(U), V)  # Sustituyendo las componentes de r(t)
