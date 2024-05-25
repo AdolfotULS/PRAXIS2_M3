@@ -50,7 +50,7 @@ def visualizar_curva_y_cono():
     # Solicitar al usuario los valores de t para la comprobacion
     print("Ingrese 5 valores para t , separados por comas:")
     input_t_values = input()
-    t_values = [float(t) for t in input_t_values.split(",") if -100 <= float(t) <= 100][:5]
+    t_values = [float(t) for t in input_t_values.split(",") if -10 <= float(t) <= 10][:5]
     
     puntos_x, puntos_y, puntos_z = [], [], []  #Almacenar valores
 
