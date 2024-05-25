@@ -50,7 +50,7 @@ def visualizar_curva_y_cono():
     # Solicitar al usuario los valores de t para la comprobacion
     print("Ingrese 5 valores para t , separados por comas:")
     input_t_values = input()
-    t_values = [float(t) for t in input_t_values.split(",") if 0 <= float(t) <= 5][:5]
+    t_values = [float(t) for t in input_t_values.split(",") if -100 <= float(t) <= 100][:5]
     
     puntos_x, puntos_y, puntos_z = [], [], []  #Almacenar valores
 
@@ -62,12 +62,12 @@ def visualizar_curva_y_cono():
         puntos_y.append(y)
         puntos_z.append(z)
         comprobacion = x**2 + y**2 - z**2
-        print(f"Para t = {t}, x^2 + y^2 - z^2 = {comprobacion}")
+        print(f"\nPara t = {t}, x^2 + y^2 - z^2 = {comprobacion}")
 
         if np.isclose(comprobacion, 0):
-            print(f"La curva r(t) se encuentra sobre la superficie del cono para t = {t}.")
+            print(f"La curva r(t) se encuentra sobre la superficie del cono para t = {t}.\n")
         else:
-            print(f"La curva r(t) NO se encuentra sobre la superficie del cono para t = {t}.")
+            print(f"La curva r(t) NO se encuentra sobre la superficie del cono para t = {t}.\n")
 
     # Marca los puntos de comprobacion en la grafica
     ax.scatter(puntos_x, puntos_y, puntos_z, color='red', s=50, label='Puntos de Comprobacion')
