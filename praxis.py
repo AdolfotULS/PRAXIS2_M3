@@ -48,7 +48,7 @@ def visualizar_curva_y_cono():
     ax.legend()
 
     # Solicitar al usuario los valores de t para la comprobacion
-    print("Ingrese 5 valores para t , separados por comas:")
+    print("Ingrese 5 valores para t entre un rango de [-10, 10], separados por comas:")
     input_t_values = input()
     t_values = [float(t) for t in input_t_values.split(",") if -10 <= float(t) <= 10][:5]
     
